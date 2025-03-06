@@ -1,38 +1,239 @@
-.App {
-  text-align: center;
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f7fa;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header styles */
+.app-header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.app-header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Content container */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+/* Map placeholder - to be replaced with actual map */
+.map-placeholder {
+  flex: 1;
+  min-height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #e9ecef;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Info container */
+.info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Location list */
+.location-list h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: #2c3e50;
+}
+
+.location-list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.location-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.location-list li:hover {
+  background-color: #f0f4f8;
+}
+
+.location-list li.active {
+  background-color: #e3f2fd;
+  font-weight: 600;
+}
+
+/* Location details */
+.location-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eaeaea;
+}
+
+.location-details h2 {
+  font-size: 1.6rem;
+  color: #2c3e50;
+}
+
+.location-image {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.location-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.location-description {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.location-coordinates {
+  background-color: #f0f4f8;
+  padding: 0.8rem;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+/* Audio player */
+.audio-player {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1rem;
+  background-color: #f0f4f8;
+  border-radius: 6px;
+}
+
+.audio-player h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.audio-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #3498db;
   color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
+.audio-button:hover {
+  background-color: #2980b9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Footer */
+.app-footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .content-container {
+    flex-direction: row;
   }
-  to {
-    transform: rotate(360deg);
+
+  .map-placeholder {
+    flex: 2;
+    min-height: 500px;
+  }
+
+  .info-container {
+    flex: 1;
+    max-width: 400px;
+    overflow-y: auto;
+    max-height: 500px;
   }
 }
+
+@media (min-width: 1024px) {
+  .app-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .map-placeholder {
+    min-height: 600px;
+  }
+
+  .info-container {
+    max-height: 600px;
+  }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  .app-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .content-container {
+    padding: 0.5rem;
+  }
+
+  .location-details h2 {
+    font-size: 1.4rem;
+  }
+}
+
