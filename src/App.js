@@ -1,14 +1,15 @@
 "use client"
 
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 import "./App.css"
 import { Play, Pause, MapPin, Info, Volume2 } from "lucide-react"
+import LanguageSelector from "./component/language-selector"
 
 // Sample location data
 const locationData = [
   {
     id: 1,
-    name: "Central Park",
+    name: "골프 VALLEY COURSE",
     description: "A large urban park in the heart of the city.",
     latitude: 40.785091,
     longitude: -73.968285,
@@ -17,7 +18,7 @@ const locationData = [
   },
   {
     id: 2,
-    name: "Brooklyn Bridge",
+    name: "골프 LAKE COURSE",
     description: "An iconic suspension bridge connecting Manhattan and Brooklyn.",
     latitude: 40.7061,
     longitude: -73.9969,
@@ -26,7 +27,7 @@ const locationData = [
   },
   {
     id: 3,
-    name: "Times Square",
+    name: "골프 HILL COURSE",
     description: "Famous commercial intersection known for its bright lights and billboards.",
     latitude: 40.758,
     longitude: -73.9855,
@@ -36,41 +37,77 @@ const locationData = [
 ]
 
 function App() {
-  const [selectedLocation, setSelectedLocation] = useState(locationData[0])
-  const [isPlaying, setIsPlaying] = useState(false)
-  const audioRef = useRef(null)
+  const [selectedLocation, setSelectedLocation] = useState(locationData[0]);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(null);
+  
+  const kakaoMaps = useRef(null);
+  const [map, setMap] = useState(null);
+
 
   const handleLocationSelect = (location) => {
-    setSelectedLocation(location)
+    setSelectedLocation(location);
     if (audioRef.current) {
-      audioRef.current.pause()
-      setIsPlaying(false)
-      audioRef.current.src = location.audio
-      audioRef.current.load()
+      audioRef.current.pause();
+      setIsPlaying(false);
+      audioRef.current.src = location.audio;
+      audioRef.current.load();
     }
   }
 
   const toggleAudio = () => {
     if (audioRef.current) {
       if (isPlaying) {
-        audioRef.current.pause()
+        audioRef.current.pause();
       } else {
-        audioRef.current.play()
+        audioRef.current.play();
       }
-      setIsPlaying(!isPlaying)
+      setIsPlaying(!isPlaying);
     }
   }
+  
+    const getKakao = () => {
+      const mapContainer = document.getElementById('map');
+      const mapScript = document.createElement("script");
+
+      mapScript.async = true;
+      mapScript.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.REACT_APP_KAKAOMAP_KEY}&autoload=false`;
+    
+      document.head.appendChild(mapScript);
+
+      const onLoadKakaoMap = () => {
+        window.kakao.maps.load(() => {
+          if (!map) {
+            const mapOptions = {
+              center: new window.kakao.maps.LatLng(37.8221226, 127.5898427),
+              level: 4,
+            };
+            const map = new window.kakao.maps.Map(mapContainer, mapOptions);
+            setMap(map);
+          }
+        });
+      };
+      mapScript.addEventListener("load", onLoadKakaoMap);
+
+      
+      
+    };
+    useEffect(() => {
+      getKakao();
+    }, []);
 
   return (
     <div className="app-container">
       <header className="app-header">
         <h1>ELYSIAN Location Guide</h1>
+        <LanguageSelector />
       </header>
 
       <div className="content-container">
         {/* Map container will be added by the user */}
+        
         <div className="map-placeholder">
-          <p>Your map will be displayed here</p>
+          <div id="map" ref={kakaoMaps} style={{width:"100%",height:"100%"}}></div>
         </div>
 
         <div className="info-container">
