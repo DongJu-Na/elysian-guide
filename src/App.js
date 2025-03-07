@@ -54,7 +54,7 @@ function App() {
           if (!map) {
             const mapOptions = {
               center: new window.kakao.maps.LatLng(37.8221226, 127.5898427),
-              level: 2,
+              level: 1,
             };
             const map = new window.kakao.maps.Map(mapContainer, mapOptions);
             const zoomControl = new window.kakao.maps.ZoomControl();
