@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react"
 import "./App.css"
 import { Play, Pause, MapPin, Info, Volume2 } from "lucide-react"
 import LanguageSelector from "./component/language-selector"
+import { useTranslation } from "react-i18next"
 
 // Sample location data
 const locationData = [
@@ -37,6 +38,7 @@ const locationData = [
 ]
 
 function App() {
+  const { t } = useTranslation();
   const [selectedLocation, setSelectedLocation] = useState(locationData[0]);
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
@@ -80,10 +82,13 @@ function App() {
           if (!map) {
             const mapOptions = {
               center: new window.kakao.maps.LatLng(37.8221226, 127.5898427),
-              level: 4,
+              level: 2,
             };
             const map = new window.kakao.maps.Map(mapContainer, mapOptions);
+            const zoomControl = new window.kakao.maps.ZoomControl();
+            map.addControl(zoomControl, window.kakao.maps.ControlPosition.RIGHT);
             setMap(map);
+                  
           }
         });
       };
@@ -99,7 +104,7 @@ function App() {
   return (
     <div className="app-container">
       <header className="app-header">
-        <h1>ELYSIAN Location Guide</h1>
+        <h1>ELYSIAN Location Guide </h1>
         <LanguageSelector />
       </header>
 
@@ -112,7 +117,7 @@ function App() {
 
         <div className="info-container">
           <div className="location-list">
-            <h2>Locations</h2>
+            <h2>{t("locations")}</h2>
             <ul>
               {locationData.map((location) => (
                 <li
