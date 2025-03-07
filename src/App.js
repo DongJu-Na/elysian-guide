@@ -86,7 +86,10 @@ function App() {
             };
             const map = new window.kakao.maps.Map(mapContainer, mapOptions);
             const zoomControl = new window.kakao.maps.ZoomControl();
+            const mapTypeControl = new window.kakao.maps.MapTypeControl();
             map.addControl(zoomControl, window.kakao.maps.ControlPosition.RIGHT);
+            map.addControl(mapTypeControl, window.kakao.maps.ControlPosition.TOPRIGHT);
+
             setMap(map);
                   
           }
