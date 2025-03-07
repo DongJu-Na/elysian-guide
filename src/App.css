@@ -86,6 +86,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  max-height: 200px; /* 최대 높이 설정 */
+  overflow-y: auto; /* 스크롤 추가 */
 }
 
 .location-list li {
@@ -242,4 +244,30 @@ body {
   .location-details h2 {
     font-size: 1.4rem;
   }
+}
+
+
+.social-icons {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.social-icon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
 }

@@ -1,6 +1,99 @@
 {
-    "hello": "こんにちは",
-    "language": "言語を選択",
-    "locations" : "場所"
-  }
-  
+    "page" : {
+      "locations" : "場所",
+      "audioGuide" : "音声ガイド"
+    },
+
+    "data": {
+      "golfCourse": {
+        "name": "ゴルフコース",
+        "description": "最高のコースでラウンドを楽しもう！"
+      },
+      "golfPracticeRange": {
+        "name": "ゴルフ練習場",
+        "description": "スキルを磨くための練習場！"
+      },
+      "elSuiteCondo": {
+        "name": "エルスイートコンド",
+        "description": "快適な休息と最高のサービスを提供するラグジュアリーコンドミニアム。"
+      },
+      "skiResort": {
+        "name": "スキーリゾート",
+        "description": "冬のスポーツを楽しめる魅力的な雪景色！"
+      },
+      "yellowChicken": {
+        "name": "イエローチキン",
+        "description": "サクサクでジューシーな味わいが人気のチキンレストラン！"
+      },
+      "shadeHouse": {
+        "name": "シェードハウス",
+        "description": "ラウンド中に休憩できるアットホームな空間、軽食とドリンクも提供。"
+      },
+      "grandChefGolf": {
+        "name": "グランシェフ（ゴルフ）",
+        "description": "ゴルフコースで楽しむ高級ダイニング、特別な料理を体験しよう！"
+      },
+      "wonderBurger": {
+        "name": "ワンダーバーガー",
+        "description": "分厚いパティと新鮮な材料で作られた絶品のハンバーガー店。"
+      },
+      "alpHouse": {
+        "name": "アルプハウス",
+        "description": "アルプスの雰囲気を楽しめる温かく魅力的なレストラン。"
+      },
+      "bochale": {
+        "name": "ボシャレ",
+        "description": "高級ワインと一緒に楽しめる上品なダイニングスペース。"
+      },
+      "cheongchunBan": {
+        "name": "青春飯店",
+        "description": "熱々のスープともちもちの麺が特徴の中華レストラン。"
+      },
+      "snowGarden": {
+        "name": "スノーガーデン",
+        "description": "冬の魅力が詰まった美しい休憩スペース。"
+      },
+      "beerGarden": {
+        "name": "ビアガーデン",
+        "description": "冷たいビールを楽しむリラックスした場所！"
+      },
+      "starlightGrillBBQ": {
+        "name": "スターライトグリルBBQ",
+        "description": "夜空の下で楽しむ美味しいバーベキューパーティー。"
+      },
+      "odeum": {
+        "name": "オデウム",
+        "description": "パフォーマンスと文化のための素晴らしい空間。"
+      },
+      "grandGrill": {
+        "name": "グラングリル",
+        "description": "高級グリルチキンとバーベキューを楽しめるレストラン。"
+      },
+      "aravista": {
+        "name": "アラビスタ",
+        "description": "香り高いコーヒーと美味しいデザートを提供する居心地の良いカフェ。"
+      },
+      "grandChefCondo": {
+        "name": "グランシェフ（コンド）",
+        "description": "コンドミニアムで楽しむ高級ダイニング、特別な料理を体験しよう！"
+      },
+      "campingPark": {
+        "name": "キャンピングパーク",
+        "description": "自然の中でキャンプを楽しめる癒しの空間。"
+      },
+      "lawnSportsField": {
+        "name": "芝生スポーツフィールド",
+        "description": "青々とした芝生の上でさまざまなスポーツを楽しめる空間。"
+      },
+      "outdoorPool": {
+        "name": "屋外プール",
+        "description": "爽やかな水遊びを楽しめる開放感あふれるプール。"
+      },
+      "goKart": {
+        "name": "ゴーカート",
+        "description": "スリル満点のレース体験ができるゴーカートトラック！"
+      }
+    }
+
+}
+    

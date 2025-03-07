@@ -1,6 +1,98 @@
 {
-    "hello": "안녕하세요",
-    "language": "언어 선택",
-    "locations" : "장소"
-  }
+  "page" : {
+    "locations" : "장소",
+    "audioGuide" : "음성 안내"
+  },
+  "data": {
+        "golfCourse": {
+          "name": "골프장",
+          "description": "최상의 코스에서 즐기는 라운딩!"
+        },
+        "golfPracticeRange": {
+          "name": "골프연습장",
+          "description": "기술 향상을 위한 체계적인 연습장!"
+        },
+        "elSuiteCondo": {
+          "name": "엘 스위트 콘도",
+          "description": "편안한 휴식과 품격 있는 서비스를 제공하는 럭셔리 콘도."
+        },
+        "skiResort": {
+          "name": "스키장",
+          "description": "겨울 스포츠의 낭만을 만끽할 수 있는 환상적인 설원!"
+        },
+        "yellowChicken": {
+          "name": "노란통닭",
+          "description": "바삭하고 촉촉한 맛이 일품인 인기 치킨 맛집!"
+        },
+        "shadeHouse": {
+          "name": "그늘집",
+          "description": "라운딩 중 잠시 쉬어가는 아늑한 공간, 가벼운 식사와 음료 제공."
+        },
+        "grandChefGolf": {
+          "name": "그랑셰프(골프)",
+          "description": "골프장에서 즐기는 고급 다이닝, 특별한 미식을 경험하세요!"
+        },
+        "wonderBurger": {
+          "name": "원더버거",
+          "description": "두툼한 패티와 신선한 재료가 조화로운 수제버거 맛집."
+        },
+        "alpHouse": {
+          "name": "알프하우스",
+          "description": "알프스 감성을 담은 따뜻한 분위기의 레스토랑."
+        },
+        "bochale": {
+          "name": "보샬레",
+          "description": "고급 와인과 함께 즐기는 품격 있는 다이닝 공간."
+        },
+        "cheongchunBan": {
+          "name": "청춘반점",
+          "description": "뜨끈한 국물과 쫄깃한 면발이 일품인 중식당."
+        },
+        "snowGarden": {
+          "name": "스노우가든",
+          "description": "겨울 감성이 가득한 아름다운 휴식 공간."
+        },
+        "beerGarden": {
+          "name": "비어가든",
+          "description": "시원한 맥주 한잔과 함께하는 여유로운 순간!"
+        },
+        "starlightGrillBBQ": {
+          "name": "별빛그릴 BBQ",
+          "description": "밤하늘 아래에서 즐기는 맛있는 바비큐 파티."
+        },
+        "odeum": {
+          "name": "오데움",
+          "description": "공연과 문화가 함께하는 멋진 공간."
+        },
+        "grandGrill": {
+          "name": "그랑그릴",
+          "description": "고품격 닭갈비와 그릴 요리를 맛볼 수 있는 레스토랑."
+        },
+        "aravista": {
+          "name": "아라비스타",
+          "description": "향긋한 커피와 맛있는 디저트가 있는 감성 카페."
+        },
+        "grandChefCondo": {
+          "name": "그랑셰프(콘도)",
+          "description": "콘도에서 즐기는 고급 다이닝, 특별한 미식을 경험하세요!"
+        },
+        "campingPark": {
+          "name": "캠핑파크",
+          "description": "자연 속에서 캠핑을 즐길 수 있는 힐링 공간."
+        },
+        "lawnSportsField": {
+          "name": "잔디운동장",
+          "description": "넓고 푸른 잔디 위에서 다양한 스포츠를 즐길 수 있는 공간."
+        },
+        "outdoorPool": {
+          "name": "야외수영장",
+          "description": "시원한 물놀이를 즐길 수 있는 개방형 수영장."
+        },
+        "goKart": {
+          "name": "고카트",
+          "description": "스릴 넘치는 레이싱을 체험할 수 있는 고카트 트랙!"
+        }
+}
+
+}
   

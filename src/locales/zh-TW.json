@@ -1,6 +1,99 @@
 {
-    "hello": "你好",
-    "language": "选择语言",
-    "locations" : "地點"
-  }
-  
+    "page" : {
+      "locations" : "地點",
+      "audioGuide" : "語音導覽"
+    },
+
+    "data": {
+      "golfCourse": {
+        "name": "高爾夫球場",
+        "description": "在最好的球場享受一場高爾夫比賽！"
+      },
+      "golfPracticeRange": {
+        "name": "高爾夫練習場",
+        "description": "一個用來提高技能的練習場！"
+      },
+      "elSuiteCondo": {
+        "name": "艾爾套公寓",
+        "description": "提供舒適休息和一流服務的奢華公寓。"
+      },
+      "skiResort": {
+        "name": "滑雪度假村",
+        "description": "一個迷人的雪景，可以享受冬季運動。"
+      },
+      "yellowChicken": {
+        "name": "黃雞餐廳",
+        "description": "以酥脆多汁的口感而聞名的受歡迎的雞肉餐廳！"
+      },
+      "shadeHouse": {
+        "name": "遮陽屋",
+        "description": "一個可以在打球時休息的溫馨場所，提供輕食和飲品。"
+      },
+      "grandChefGolf": {
+        "name": "大廚（高爾夫）",
+        "description": "在高爾夫球場享受精緻的美食，體驗頂級料理！"
+      },
+      "wonderBurger": {
+        "name": "奇蹟漢堡",
+        "description": "一家提供厚實漢堡餅和新鮮食材的美味漢堡店。"
+      },
+      "alpHouse": {
+        "name": "阿爾卑斯之家",
+        "description": "一個充滿阿爾卑斯氣氛的溫暖迷人的餐廳。"
+      },
+      "bochale": {
+        "name": "波查雷",
+        "description": "一個可以享受優質美酒和美食的高檔餐廳。"
+      },
+      "cheongchunBan": {
+        "name": "青春飯店",
+        "description": "提供美味熱湯和有嚼勁的麵條的中餐館。"
+      },
+      "snowGarden": {
+        "name": "雪花花園",
+        "description": "一個充滿冬季魅力的美麗休息空間。"
+      },
+      "beerGarden": {
+        "name": "啤酒花園",
+        "description": "一個可以輕鬆享受冰涼啤酒的地方！"
+      },
+      "starlightGrillBBQ": {
+        "name": "星光燒烤",
+        "description": "在星空下享受美味燒烤派對。"
+      },
+      "odeum": {
+        "name": "奧迪姆",
+        "description": "一個適合表演和文化活動的美妙空間。"
+      },
+      "grandGrill": {
+        "name": "大烤架",
+        "description": "一個可以享受優質烤雞和燒烤的餐廳。"
+      },
+      "aravista": {
+        "name": "阿拉維斯塔",
+        "description": "一個舒適的咖啡館，提供香濃咖啡和美味的甜點。"
+      },
+      "grandChefCondo": {
+        "name": "大廚（公寓）",
+        "description": "在公寓裡享受精緻的美食，體驗頂級料理！"
+      },
+      "campingPark": {
+        "name": "露營公園",
+        "description": "一個可以享受大自然露營的療癒空間。"
+      },
+      "lawnSportsField": {
+        "name": "草地運動場",
+        "description": "一個可以在翠綠草地上享受各種運動的場所。"
+      },
+      "outdoorPool": {
+        "name": "戶外游泳池",
+        "description": "一個可以盡情享受清涼游泳的開放式泳池。"
+      },
+      "goKart": {
+        "name": "卡丁車",
+        "description": "在卡丁車賽道上體驗刺激的賽車樂趣！"
+      }
+    }
+
+}
+    

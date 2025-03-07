@@ -1,6 +1,101 @@
 {
-    "hello": "hello",
-    "language": "language",
-    "locations" : "locations"
-  }
-  
+    "page" : {
+      "locations" : "locations",
+      "audioGuide" : "Audio Guide"
+    },
+    "data": {
+      "golfCourse": {
+        "name": "Golf Course",
+        "description": "Enjoy a round on the best course!"
+      },
+      "golfPracticeRange": {
+        "name": "Golf Practice Range",
+        "description": "A practice range for perfecting your skills!"
+      },
+      "elSuiteCondo": {
+        "name": "El Suite Condo",
+        "description": "A luxury condo offering comfortable rest and top-tier service."
+      },
+      "skiResort": {
+        "name": "Ski Resort",
+        "description": "An enchanting snowy landscape where you can enjoy winter sports."
+      },
+      "yellowChicken": {
+        "name": "Yellow Chicken",
+        "description": "A popular chicken restaurant with crispy and juicy flavors."
+      },
+      "shadeHouse": {
+        "name": "Shade House",
+        "description": "A cozy place to take a break during your round, with light snacks and drinks."
+      },
+      "grandChefGolf": {
+        "name": "Grand Chef (Golf)",
+        "description": "Enjoy fine dining on the golf course, experience exquisite cuisine!"
+      },
+      "wonderBurger": {
+        "name": "Wonder Burger",
+        "description": "A gourmet burger joint with thick patties and fresh ingredients."
+      },
+      "alpHouse": {
+        "name": "Alp House",
+        "description": "A warm and charming restaurant with an alpine atmosphere."
+      },
+      "bochale": {
+        "name": "Bochale",
+        "description": "A sophisticated dining space where you can enjoy premium wine and meals."
+      },
+      "cheongchunBan": {
+        "name": "Cheongchun Ban",
+        "description": "A Chinese restaurant with delicious hot soup and chewy noodles."
+      },
+      "snowGarden": {
+        "name": "Snow Garden",
+        "description": "A beautiful rest space filled with winter charm."
+      },
+      "beerGarden": {
+        "name": "Beer Garden",
+        "description": "A relaxed spot to enjoy a cold beer!"
+      },
+      "starlightGrillBBQ": {
+        "name": "Starlight Grill BBQ",
+        "description": "A delightful barbecue party under the night sky."
+      },
+      "odeum": {
+        "name": "Odeum",
+        "description": "A fantastic space for performances and culture."
+      },
+      "grandGrill": {
+        "name": "Grand Grill",
+        "description": "A restaurant where you can enjoy premium grilled chicken and barbecue."
+      },
+      "aravista": {
+        "name": "Aravista",
+        "description": "A café with a cozy atmosphere serving fragrant coffee and tasty desserts."
+      },
+      "grandChefCondo": {
+        "name": "Grand Chef (Condo)",
+        "description": "Enjoy fine dining in the condo, experience exquisite cuisine!"
+      },
+      "campingPark": {
+        "name": "Camping Park",
+        "description": "A healing space where you can enjoy camping in nature."
+      },
+      "lawnSportsField": {
+        "name": "Lawn Sports Field",
+        "description": "A space where you can enjoy various sports on lush green grass."
+      },
+      "outdoorPool": {
+        "name": "Outdoor Pool",
+        "description": "An open swimming pool to enjoy a refreshing dip."
+      },
+      "goKart": {
+        "name": "Go Kart",
+        "description": "A thrilling racing experience at the go-kart track!"
+      }
+    }
+}
+    
+
+
+
+

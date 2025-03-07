@@ -2,44 +2,15 @@
 
 import { useState, useRef, useEffect } from "react"
 import "./App.css"
-import { Play, Pause, MapPin, Info, Volume2 } from "lucide-react"
+import { Play, Pause, MapPin, Info, Volume2, Youtube, BookOpen } from "lucide-react"
 import LanguageSelector from "./component/language-selector"
 import { useTranslation } from "react-i18next"
-
-// Sample location data
-const locationData = [
-  {
-    id: 1,
-    name: "골프 VALLEY COURSE",
-    description: "A large urban park in the heart of the city.",
-    latitude: 40.785091,
-    longitude: -73.968285,
-    image: "/placeholder.svg?height=300&width=400",
-    audio: "https://assets.mixkit.co/music/preview/mixkit-tech-house-vibes-130.mp3",
-  },
-  {
-    id: 2,
-    name: "골프 LAKE COURSE",
-    description: "An iconic suspension bridge connecting Manhattan and Brooklyn.",
-    latitude: 40.7061,
-    longitude: -73.9969,
-    image: "/placeholder.svg?height=300&width=400",
-    audio: "https://assets.mixkit.co/music/preview/mixkit-serene-view-443.mp3",
-  },
-  {
-    id: 3,
-    name: "골프 HILL COURSE",
-    description: "Famous commercial intersection known for its bright lights and billboards.",
-    latitude: 40.758,
-    longitude: -73.9855,
-    image: "/placeholder.svg?height=300&width=400",
-    audio: "https://assets.mixkit.co/music/preview/mixkit-hip-hop-02-621.mp3",
-  },
-]
+import locationData from "./component/locationData";
 
 function App() {
-  const { t } = useTranslation();
-  const [selectedLocation, setSelectedLocation] = useState(locationData[0]);
+  const { t, i18n } = useTranslation();
+  const locations = locationData();
+  const [selectedLocation, setSelectedLocation] = useState(locations[0]);
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
   
@@ -49,6 +20,7 @@ function App() {
 
   const handleLocationSelect = (location) => {
     setSelectedLocation(location);
+    map.panTo(new window.kakao.maps.LatLng(location.latitude, location.longitude));
     if (audioRef.current) {
       audioRef.current.pause();
       setIsPlaying(false);
@@ -90,6 +62,18 @@ function App() {
             map.addControl(zoomControl, window.kakao.maps.ControlPosition.RIGHT);
             map.addControl(mapTypeControl, window.kakao.maps.ControlPosition.TOPRIGHT);
 
+              window.kakao.maps.event.addListener(map, 'click', function(mouseEvent) {        
+      
+                console.log("클릭");
+                let latlng = mouseEvent.latLng;
+                let message = '클릭한 위치의 위도는 ' + latlng.getLat() + ' 이고, ';
+                    message += '경도는 ' + latlng.getLng() + ' 입니다';
+                
+                let resultDiv = document.getElementById('result'); 
+                resultDiv.innerHTML = message;
+                
+            });
+
             setMap(map);
                   
           }
@@ -103,6 +87,21 @@ function App() {
     useEffect(() => {
       getKakao();
     }, []);
+
+    
+
+    useEffect(() => {
+      if (selectedLocation) {
+        const updatedLocation = locations.find(
+          (loc) => loc.id === selectedLocation.id
+        );
+        if (updatedLocation) {
+          setSelectedLocation(updatedLocation); // 새로운 번역된 데이터 적용
+        }
+      }
+    }, [i18n.language, locations]);
+
+    
 
   return (
     <div className="app-container">
@@ -120,9 +119,9 @@ function App() {
 
         <div className="info-container">
           <div className="location-list">
-            <h2>{t("locations")}</h2>
+            <h2>{t("page.locations")}</h2>
             <ul>
-              {locationData.map((location) => (
+              {locations.map((location) => (
                 <li
                   key={location.id}
                   className={selectedLocation?.id === location.id ? "active" : ""}
@@ -135,7 +134,8 @@ function App() {
             </ul>
           </div>
 
-          {selectedLocation && (
+          {
+          selectedLocation && (
             <div className="location-details">
               <h2>{selectedLocation.name}</h2>
 
@@ -148,14 +148,14 @@ function App() {
                 <p>{selectedLocation.description}</p>
               </div>
 
+              
               <div className="location-coordinates">
-                <p>Latitude: {selectedLocation.latitude}</p>
-                <p>Longitude: {selectedLocation.longitude}</p>
+                <p id="result"></p>
               </div>
 
               <div className="audio-player">
                 <h3>
-                  <Volume2 size={18} /> Audio Guide
+                  <Volume2 size={18} /> {t("page.audioGuide")}
                 </h3>
                 <audio ref={audioRef} />
                 <button className="audio-button" onClick={toggleAudio}>
@@ -170,6 +170,26 @@ function App() {
 
       <footer className="app-footer">
         <p>© {new Date().getFullYear()} Interactive Location Guide</p>
+        <div className="social-icons">
+          <a
+            href="https://blog.naver.com/elly4love"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-icon"
+            aria-label="블로그"
+          >
+            <BookOpen size={20} />
+          </a>
+          <a
+            href="https://www.youtube.com/@elysianResort"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-icon"
+            aria-label="유튜브"
+          >
+            <Youtube size={20} />
+          </a>
+        </div>
       </footer>
     </div>
   )

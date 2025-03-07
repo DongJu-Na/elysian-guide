@@ -1,6 +1,99 @@
 {
-    "hello": "你好",
-    "language": "选择语言",
-    "locations" : "地點"
-  }
+  "page" : {
+    "locations" : "地點",
+    "audioGuide" : "语音导览"
+  },
+
+  "data": {
+      "golfCourse": {
+        "name": "高尔夫球场",
+        "description": "在最好的球场享受一场高尔夫比赛！"
+      },
+      "golfPracticeRange": {
+        "name": "高尔夫练习场",
+        "description": "一个用来提高技能的练习场！"
+      },
+      "elSuiteCondo": {
+        "name": "艾尔套公寓",
+        "description": "提供舒适休息和一流服务的奢华公寓。"
+      },
+      "skiResort": {
+        "name": "滑雪度假村",
+        "description": "一个迷人的雪景，可以享受冬季运动。"
+      },
+      "yellowChicken": {
+        "name": "黄鸡餐厅",
+        "description": "以酥脆多汁的口感而闻名的受欢迎的鸡肉餐厅！"
+      },
+      "shadeHouse": {
+        "name": "遮阳屋",
+        "description": "一个可以在打球时休息的温馨场所，提供轻食和饮品。"
+      },
+      "grandChefGolf": {
+        "name": "大厨（高尔夫）",
+        "description": "在高尔夫球场享受精致的美食，体验顶级料理！"
+      },
+      "wonderBurger": {
+        "name": "奇迹汉堡",
+        "description": "一家提供厚实汉堡饼和新鲜食材的美味汉堡店。"
+      },
+      "alpHouse": {
+        "name": "阿尔卑斯之家",
+        "description": "一个充满阿尔卑斯气氛的温暖迷人的餐厅。"
+      },
+      "bochale": {
+        "name": "波查雷",
+        "description": "一个可以享受优质美酒和美食的高档餐厅。"
+      },
+      "cheongchunBan": {
+        "name": "青春饭店",
+        "description": "提供美味热汤和有嚼劲的面条的中餐馆。"
+      },
+      "snowGarden": {
+        "name": "雪花花园",
+        "description": "一个充满冬季魅力的美丽休息空间。"
+      },
+      "beerGarden": {
+        "name": "啤酒花园",
+        "description": "一个可以轻松享受冰凉啤酒的地方！"
+      },
+      "starlightGrillBBQ": {
+        "name": "星光烧烤",
+        "description": "在星空下享受美味烧烤派对。"
+      },
+      "odeum": {
+        "name": "奥迪姆",
+        "description": "一个适合表演和文化活动的美妙空间。"
+      },
+      "grandGrill": {
+        "name": "大烤架",
+        "description": "一个可以享受优质烤鸡和烧烤的餐厅。"
+      },
+      "aravista": {
+        "name": "阿拉维斯塔",
+        "description": "一个舒适的咖啡馆，提供香浓咖啡和美味的甜点。"
+      },
+      "grandChefCondo": {
+        "name": "大厨（公寓）",
+        "description": "在公寓里享受精致的美食，体验顶级料理！"
+      },
+      "campingPark": {
+        "name": "露营公园",
+        "description": "一个可以享受大自然露营的疗愈空间。"
+      },
+      "lawnSportsField": {
+        "name": "草地运动场",
+        "description": "一个可以在翠绿草地上享受各种运动的场所。"
+      },
+      "outdoorPool": {
+        "name": "户外游泳池",
+        "description": "一个可以尽情享受清凉游泳的开放式泳池。"
+      },
+      "goKart": {
+        "name": "卡丁车",
+        "description": "在卡丁车赛道上体验刺激的赛车乐趣！"
+      }
+    }
+
+}
   
