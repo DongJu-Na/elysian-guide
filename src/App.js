@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react"
 import "./App.css"
-import { Play, Pause, MapPin, Info, Volume2, Youtube, BookOpen } from "lucide-react"
+import { Play, Pause, MapPin, Info, Volume2, Youtube, BookOpen, Github  } from "lucide-react"
 import LanguageSelector from "./component/language-selector"
 import { useTranslation } from "react-i18next"
 import locationData from "./component/locationData";
@@ -16,11 +16,21 @@ function App() {
   
   const kakaoMaps = useRef(null);
   const [map, setMap] = useState(null);
+  const [markerState,setMarkerState] = useState(null);
 
 
   const handleLocationSelect = (location) => {
     setSelectedLocation(location);
+    console.info("marker",markerState);
+    if(markerState !== null) markerState.setMap(null);
     map.panTo(new window.kakao.maps.LatLng(location.latitude, location.longitude));
+    const marker = new window.kakao.maps.Marker({
+      position: new window.kakao.maps.LatLng(location.latitude, location.longitude)
+    });
+    
+  marker.setMap(map);
+  setMarkerState(marker);
+
     if (audioRef.current) {
       audioRef.current.pause();
       setIsPlaying(false);
@@ -114,7 +124,7 @@ function App() {
         {/* Map container will be added by the user */}
         
         <div className="map-placeholder">
-          <div id="map" ref={kakaoMaps} style={{width:"100%",height:"100%"}}></div>
+          <div id="map" ref={kakaoMaps} style={{width:"100%",height:"100%", minHeight: "250px"}}></div>
         </div>
 
         <div className="info-container">
@@ -189,6 +199,16 @@ function App() {
           >
             <Youtube size={20} />
           </a>
+          <a
+            href="https://github.com/DongJu-Na"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-icon"
+            aria-label="깃허브"
+          >
+            <Github size={20} />
+          </a>
+          
         </div>
       </footer>
     </div>
