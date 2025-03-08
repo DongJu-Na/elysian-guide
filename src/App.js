@@ -21,7 +21,6 @@ function App() {
 
   const handleLocationSelect = (location) => {
     setSelectedLocation(location);
-    console.info("marker",markerState);
     if(markerState !== null) markerState.setMap(null);
     map.panTo(new window.kakao.maps.LatLng(location.latitude, location.longitude));
     const marker = new window.kakao.maps.Marker({
@@ -74,13 +73,15 @@ function App() {
 
               window.kakao.maps.event.addListener(map, 'click', function(mouseEvent) {        
       
-                console.log("클릭");
                 let latlng = mouseEvent.latLng;
+                /* 디버깅용
                 let message = '클릭한 위치의 위도는 ' + latlng.getLat() + ' 이고, ';
                     message += '경도는 ' + latlng.getLng() + ' 입니다';
                 
                 let resultDiv = document.getElementById('result'); 
                 resultDiv.innerHTML = message;
+                */
+                
                 
             });
 
@@ -105,8 +106,9 @@ function App() {
         const updatedLocation = locations.find(
           (loc) => loc.id === selectedLocation.id
         );
-        if (updatedLocation) {
-          setSelectedLocation(updatedLocation); // 새로운 번역된 데이터 적용
+        if (updatedLocation) {  
+          updatedLocation.audio = updatedLocation.audio;
+          setSelectedLocation(updatedLocation);
         }
       }
     }, [i18n.language, locations]);
@@ -167,7 +169,7 @@ function App() {
                 <h3>
                   <Volume2 size={18} /> {t("page.audioGuide")}
                 </h3>
-                <audio ref={audioRef} />
+                <audio ref={audioRef} src={selectedLocation.audio} />
                 <button className="audio-button" onClick={toggleAudio}>
                   {isPlaying ? <Pause size={24} /> : <Play size={24} />}
                   {isPlaying ? "Pause" : "Play"} Audio Guide
