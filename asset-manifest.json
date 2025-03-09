@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/elysian-guide/static/css/main.0189d235.css",
-    "main.js": "/elysian-guide/static/js/main.20f5de46.js",
+    "main.js": "/elysian-guide/static/js/main.c6436933.js",
     "static/js/453.7157407a.chunk.js": "/elysian-guide/static/js/453.7157407a.chunk.js",
     "index.html": "/elysian-guide/index.html",
     "main.0189d235.css.map": "/elysian-guide/static/css/main.0189d235.css.map",
-    "main.20f5de46.js.map": "/elysian-guide/static/js/main.20f5de46.js.map",
+    "main.c6436933.js.map": "/elysian-guide/static/js/main.c6436933.js.map",
     "453.7157407a.chunk.js.map": "/elysian-guide/static/js/453.7157407a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0189d235.css",
-    "static/js/main.20f5de46.js"
+    "static/js/main.c6436933.js"
   ]
 }
