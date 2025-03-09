@@ -6,6 +6,8 @@ import { useMemo } from "react";
 
 function LocationData() {
     const { t, i18n } = useTranslation();
+    const isLocal = window.location.hostname === "localhost";
+    const basePath = isLocal ? "/" : "/elysian-guide/";
 
   return useMemo(()=> [
     {
@@ -14,8 +16,8 @@ function LocationData() {
       "description": t("data.golfCourse.description"),
       "latitude": 37.829913586492644,
       "longitude": 127.57855196226501,
-      "image": "/images/01.webp",
-      "audio": `/sounds/${i18n.language}/01.mp3`
+      "image": `${basePath}images/01.webp`,
+      "audio": `/${basePath}sounds/${i18n.language}/01.mp3`
     },
     {
       "id": 2,
@@ -23,8 +25,8 @@ function LocationData() {
       "description": t("data.golfPracticeRange.description"),
       "latitude": 37.82340463669306,
       "longitude": 127.5875761736263,
-      "image": "/images/02.webp",
-      "audio": `/sounds/${i18n.language}/02.mp3`
+      "image": `${basePath}images/02.webp`,
+      "audio": `/${basePath}sounds/${i18n.language}/02.mp3`
     },
     {
       "id": 3,
@@ -32,8 +34,8 @@ function LocationData() {
       "description": t("data.elSuiteCondo.description"),
       "latitude": 37.822149517093465,
       "longitude": 127.58994000036252,
-      "image": "/images/03.webp",
-      "audio": `/sounds/${i18n.language}/03.mp3`
+      "image": `${basePath}images/03.webp`,
+      "audio": `/${basePath}sounds/${i18n.language}/03.mp3`
     },
     {
       "id": 4,
@@ -41,8 +43,8 @@ function LocationData() {
       "description": t("data.skiResort.description"),
       "latitude": 37.81998591296518,
       "longitude": 127.59020671559892,
-      "image": "/images/04.webp",
-      "audio": `/sounds/${i18n.language}/04.mp3`
+      "image": `${basePath}images/04.webp`,
+      "audio": `/${basePath}sounds/${i18n.language}/04.mp3`
     },
     {
       "id": 5,
@@ -50,8 +52,8 @@ function LocationData() {
       "description": t("data.yellowChicken.description"),
       "latitude": 37.82186509076816,
       "longitude": 127.5900655109807,
-      "image": "/images/05.webp",
-      "audio": `/sounds/${i18n.language}/05.mp3`
+      "image": `${basePath}images/05.webp`,
+      "audio": `/${basePath}sounds/${i18n.language}/05.mp3`
     },
     {
       "id": 6,
@@ -59,8 +61,8 @@ function LocationData() {
       "description": t("data.shadeHouse.description"),
       "latitude": 37.83081958257344,
       "longitude": 127.57935701506321,
-      "image": "/images/06.webp",
-      "audio": `/sounds/${i18n.language}/06.mp3`
+      "image": `${basePath}images/06.webp`,
+      "audio": `/${basePath}sounds/${i18n.language}/06.mp3`
     },
     {
       "id": 7,
@@ -68,8 +70,8 @@ function LocationData() {
       "description": t("data.grandChefGolf.description"),
       "latitude": 37.829902199579664,
       "longitude": 127.5785774310573,
-      "image": "/images/07.webp",
-      "audio": `/sounds/${i18n.language}/07.mp3`
+      "image": `${basePath}images/07.webp`,
+      "audio": `/${basePath}sounds/${i18n.language}/07.mp3`
     },
     {
       "id": 8,
@@ -77,8 +79,8 @@ function LocationData() {
       "description": t("data.wonderBurger.description"),
       "latitude": 37.819661699455295,
       "longitude": 127.59018141914059,
-      "image": "/images/08.webp",
-      "audio": `/sounds/${i18n.language}/08.mp3`
+      "image": `${basePath}images/08.webp`,
+      "audio": `/${basePath}sounds/${i18n.language}/08.mp3`
     },
     {
       "id": 9,
@@ -86,8 +88,8 @@ function LocationData() {
       "description": t("data.alpHouse.description"),
       "latitude": 37.81524201448445,
       "longitude": 127.58259968472164,
-      "image": "/images/09.webp",
-      "audio": `/sounds/${i18n.language}/09.mp3`
+      "image": `${basePath}images/09.webp`,
+      "audio": `/${basePath}sounds/${i18n.language}/09.mp3`
     },
     {
       "id": 10,
@@ -95,8 +97,8 @@ function LocationData() {
       "description": t("data.bochale.description"),
       "latitude": 37.81985798862396,
       "longitude": 127.59011483747767,
-      "image": "/images/10.webp",
-      "audio": `/sounds/${i18n.language}/10.mp3`
+      "image": `${basePath}images/10.webp`,
+      "audio": `/${basePath}sounds/${i18n.language}/10.mp3`
     },
     {
       "id": 11,
@@ -104,8 +106,8 @@ function LocationData() {
       "description": t("data.cheongchunBan.description"),
       "latitude": 37.81525566856814,
       "longitude": 127.58257140019343 ,
-      "image": "/images/11.webp",
-      "audio": `/sounds/${i18n.language}/11.mp3`
+      "image": `${basePath}images/11.webp`,
+      "audio": `/${basePath}sounds/${i18n.language}/11.mp3`
     },
     {
       "id": 12,
@@ -113,8 +115,8 @@ function LocationData() {
       "description": t("data.snowGarden.description"),
       "latitude": 37.81549790472812,
       "longitude": 127.59226062717221,
-      "image": "/images/12.webp",
-      "audio": `/sounds/${i18n.language}/12.mp3`
+      "image": `${basePath}images/12.webp`,
+      "audio": `/${basePath}sounds/${i18n.language}/12.mp3`
     },
     {
       "id": 13,
@@ -122,8 +124,8 @@ function LocationData() {
       "description": t("data.beerGarden.description"),
       "latitude": 37.82118094038755,
       "longitude": 127.58995216664852,
-      "image": "/images/13.webp",
-      "audio": `/sounds/${i18n.language}/13.mp3`
+      "image": `${basePath}images/13.webp`,
+      "audio": `/${basePath}sounds/${i18n.language}/13.mp3`
     },
     {
       "id": 14,
@@ -131,8 +133,8 @@ function LocationData() {
       "description": t("data.starlightGrillBBQ.description"),
       "latitude": 37.82118094038755,
       "longitude": 127.58995216664852,
-      "image": "/images/14.webp",
-      "audio": `/sounds/${i18n.language}/14.mp3`
+      "image": `${basePath}images/14.webp`,
+      "audio": `/${basePath}sounds/${i18n.language}/14.mp3`
     },
     {
       "id": 15,
@@ -140,8 +142,8 @@ function LocationData() {
       "description": t("data.odeum.description"),
       "latitude": 37.821886859521996,
       "longitude": 127.59021617442626,
-      "image": "/images/15.webp",
-      "audio": `/sounds/${i18n.language}/15.mp3`
+      "image": `${basePath}images/15.webp`,
+      "audio": `/${basePath}sounds/${i18n.language}/15.mp3`
     },
     {
       "id": 16,
@@ -149,8 +151,8 @@ function LocationData() {
       "description": t("data.grandGrill.description"),
       "latitude": 37.822115235230115,
       "longitude": 127.5900391080666,
-      "image": "/images/16.webp",
-      "audio": `/sounds/${i18n.language}/16.mp3`
+      "image": `${basePath}images/16.webp`,
+      "audio": `/${basePath}sounds/${i18n.language}/16.mp3`
     },
     {
       "id": 17,
@@ -158,8 +160,8 @@ function LocationData() {
       "description": t("data.aravista.description"),
       "latitude": 37.821661200582696,
       "longitude": 127.58985093062716,
-      "image": "/images/17.webp",
-      "audio": `/sounds/${i18n.language}/17.mp3`
+      "image": `${basePath}images/17.webp`,
+      "audio": `/${basePath}sounds/${i18n.language}/17.mp3`
     },
     {
       "id": 18,
@@ -167,8 +169,8 @@ function LocationData() {
       "description": t("data.grandChefCondo.description"),
       "latitude": 37.82187591115232,
       "longitude": 127.59015361964525,
-      "image": "/images/18.webp",
-      "audio": `/sounds/${i18n.language}/18.mp3`
+      "image": `${basePath}images/18.webp`,
+      "audio": `/${basePath}sounds/${i18n.language}/18.mp3`
     },
     {
       "id": 19,
@@ -176,8 +178,8 @@ function LocationData() {
       "description": t("data.campingPark.description"),
       "latitude": 37.82113728826797,
       "longitude": 127.58967355722301,
-      "image": "/images/19.webp",
-      "audio": `/sounds/${i18n.language}/19.mp3`
+      "image": `${basePath}images/19.webp`,
+      "audio": `/${basePath}sounds/${i18n.language}/19.mp3`
     },
     {
       "id": 20,
@@ -185,8 +187,8 @@ function LocationData() {
       "description": t("data.lawnSportsField.description"),
       "latitude": 37.827110232135674,
       "longitude": 127.58703194892894,
-      "image": "/images/20.webp",
-      "audio": `/sounds/${i18n.language}/20.mp3`
+      "image": `${basePath}images/20.webp`,
+      "audio": `/${basePath}sounds/${i18n.language}/20.mp3`
     },
     {
       "id": 21,
@@ -194,8 +196,8 @@ function LocationData() {
       "description": t("data.outdoorPool.description"),
       "latitude": 37.82309913124466,
       "longitude": 127.58966645055202,
-      "image": "/images/21.webp",
-      "audio": `/sounds/${i18n.language}/21.mp3`
+      "image": `${basePath}images/21.webp`,
+      "audio": `/${basePath}sounds/${i18n.language}/21.mp3`
     },
     {
       "id": 22,
@@ -203,8 +205,8 @@ function LocationData() {
       "description": t("data.goKart.description"),
       "latitude": 37.82021867945766,
       "longitude": 127.59005240360717,
-      "image": "/images/22.webp",
-      "audio": `/sounds/${i18n.language}/22.mp3`
+      "image": `${basePath}images/22.webp`,
+      "audio": `/${basePath}sounds/${i18n.language}/22.mp3`
     }
     ], [t, i18n.language]);
 };
