@@ -1,7 +1,7 @@
 {
   "name": "elysian-guide",
   "version": "0.1.0",
-  "homepage": "https://dongju-na.github.io/elysian-guide/build/",
+  "homepage": "https://dongju-na.github.io/elysian-guide/",
   "private": false,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
