@@ -161,7 +161,7 @@ function App() {
               </div>
 
               
-              <div className="location-coordinates">
+              <div className="location-coordinates" style={{display:"none"}}>
                 <p id="result"></p>
               </div>
 

@@ -1,17 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+"use client"
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  
-    <App />
-  
-);
+import { useState } from "react"
+import ReactDOM from "react-dom/client"
+import "./index.css"
+import App from "./App"
+import SplashScreen from "./component/SplashScreen"
+import reportWebVitals from "./reportWebVitals"
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function Root() {
+  const [showSplash, setShowSplash] = useState(true)
+
+  const handleSplashComplete = () => {
+    setShowSplash(false)
+  }
+
+  return <>{showSplash ? <SplashScreen onComplete={handleSplashComplete} /> : <App />}</>
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"))
+root.render(<Root />)
+
+reportWebVitals()
+
