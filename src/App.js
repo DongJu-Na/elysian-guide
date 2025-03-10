@@ -173,6 +173,11 @@ function App() {
                 <button className="audio-button" onClick={toggleAudio}>
                   {isPlaying ? <Pause size={24} /> : <Play size={24} />}
                   {isPlaying ? "Pause" : "Play"} Audio Guide
+                  <img 
+                    src="/elysian-guide/images/CLOVA_dubbing_watermark_black.png" 
+                    alt="CLOVA dubbing" 
+                    class="audio-button-watermark"
+                  />
                 </button>
               </div>
             </div>
