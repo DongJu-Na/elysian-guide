@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react"
 import "./App.css"
-import { Play, Pause, MapPin, Info, Volume2, Youtube, BookOpen, Github  } from "lucide-react"
+import { Play, Pause, MapPin, Info, Volume2, Youtube, BookOpen, Github, Instagram  } from "lucide-react"
 import LanguageSelector from "./component/language-selector"
 import { useTranslation } from "react-i18next"
 import locationData from "./component/locationData";
@@ -18,7 +18,7 @@ function App() {
   const [map, setMap] = useState(null);
   const [markerState,setMarkerState] = useState(null);
 
-
+  
   const handleLocationSelect = (location) => {
     setSelectedLocation(location);
     if(markerState !== null) markerState.setMap(null);
@@ -90,16 +90,12 @@ function App() {
           }
         });
       };
-      mapScript.addEventListener("load", onLoadKakaoMap);
-
-      
-      
+      mapScript.addEventListener("load", onLoadKakaoMap);    
     };
+
     useEffect(() => {
       getKakao();
     }, []);
-
-    
 
     useEffect(() => {
       if (selectedLocation) {
@@ -188,6 +184,15 @@ function App() {
       <footer className="app-footer">
         <p>© {new Date().getFullYear()} Interactive Location Guide</p>
         <div className="social-icons">
+          <a
+            href="https://www.instagram.com/elysianresort/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-icon"
+            aria-label="인스타"
+          >
+            <Instagram size={20} />
+          </a>
           <a
             href="https://blog.naver.com/elly4love"
             target="_blank"
